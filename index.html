@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate User Stories, Acceptance Criteria and Test Cases from a Business Requirement Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 200px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            background-color: darkred;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Upload and Download</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file" style="display: none;" id="upload-file">
+        <label for="upload-file" class="button">Upload</label>
+        <input type="submit" value="Process" class="button">
+        <a href="{{ url_for('download_file', filename='example.txt') }}" class="button">Download</a>
+    </form>
+</body>
+</html>
